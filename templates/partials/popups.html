@@ -1,0 +1,163 @@
+<!--login!-->
+<div id="login-popup" class="popup-container">
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-title">Вход</div>
+                <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <form name="login-form">
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <input type="password" name="password" placeholder="Пароль">
+                    </div>
+                    <div class="form-row">
+                        <div class="row-inline">
+                            <div class="col-inline-xs-6 middle">
+                                <button type="submit" class="submit-button">Войти</button>
+                            </div>
+                            <div class="col-inline-xs-6 middle">
+                                <div class="text-right">
+                                    <button id="show-password-popup" type="button" class="tranaparent-button">Напоминание пароля</button>
+                                    <button id="show-registration-popup" type="button" class="tranaparent-button">Регистрация</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="social-login">
+                    <div class="row-inline">
+                        <div class="col-inline-xs-6 middle">
+                            <div class="social-title">Или войдите с помощью аккаута социальных сетей</div>
+                        </div>
+                        <div class="col-inline-xs-6 middle">
+                            <ul class="social-list">
+                                <li class="social-child">
+                                    <a href="javascript:;" class="social-link vk" target="_blank"></a>
+                                </li>
+                                <li class="social-child">
+                                    <a href="javascript:;" class="social-link fb" target="_blank"></a>
+                                </li>
+                                <li class="social-child">
+                                    <a href="javascript:;" class="social-link tw" target="_blank"></a>
+                                </li>
+                                <li class="social-child">
+                                    <a href="javascript:;" class="social-link gp" target="_blank"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--registration!-->
+<div id="registration-popup" class="popup-container">
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-title">Регистрация</div>
+                <button type="button" data-popup-close class="popup-close"></button>
+            </div>
+            <div class="popup-body">
+                <form name="registration-form">
+                    <div class="form-row">
+                        <label for="email">Введите свой email</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="form-row">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="name">Имя</label>
+                                <input type="text" name="name">
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="surname">Фамилия</label>
+                                <input type="text" name="surname">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label for="password">Пароль</label>
+                                <input type="password" name="password">
+                            </div>
+                            <div class="col-xs-6">
+                                <label for="password_2">Повторите пароль</label>
+                                <input type="password" name="password_2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row last">
+                        <button type="submit" class="submit-button">Зарегистрироваться</button>
+                    </div>
+                </form>
+                <div class="social-login">
+                    <div class="row-inline">
+                        <div class="col-inline-xs-6 middle">
+                            <div class="social-title">Или войдите с помощью аккаута социальных сетей</div>
+                        </div>
+                        <div class="col-inline-xs-6 middle">
+                            <ul class="social-list">
+                                <li class="social-child">
+                                    <a href="javascript:;" class="social-link vk" target="_blank"></a>
+                                </li>
+                                <li class="social-child">
+                                    <a href="javascript:;" class="social-link fb" target="_blank"></a>
+                                </li>
+                                <li class="social-child">
+                                    <a href="javascript:;" class="social-link tw" target="_blank"></a>
+                                </li>
+                                <li class="social-child">
+                                    <a href="javascript:;" class="social-link gp" target="_blank"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="text-banner">
+                    <p>Для регистрированных пользователей<br> скидка на всю продукцию 10 %</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--password!-->
+<div id="password-popup" class="popup-container">
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <div class="popup-title">Напоминание пароля</div>
+                <button type="button" data-popup-close class="popup-close"><i class="fa fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <form name="password-form">
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <div class="row-inline">
+                            <div class="col-inline-xs-6 middle">
+                                <button type="submit" class="submit-button">Отправить</button>
+                            </div>
+                            <div class="col-inline-xs-6 middle">
+                                <div class="text-right">
+                                    <button id="show-login-popup" type="button" class="tranaparent-button">Вспомнил пароль</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

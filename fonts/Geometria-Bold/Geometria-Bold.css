@@ -1,0 +1,14 @@
+/* Copyright (c) 2012 by Vyacheslav Kirilenko, Gayane Bagdasaryan. All rights reserved. */
+
+@font-face {
+	font-family: 'GeometriaBold';
+	src: url('Geometria-Bold.eot');
+	src:
+	     url('Geometria-Bold.eot?#iefix') format('embedded-opentype'),
+	     url('Geometria-Bold.woff2') format('woff2'),
+	     url('Geometria-Bold.woff') format('woff'),
+	     url('Geometria-Bold.ttf') format('truetype'),
+	     url('Geometria-Bold.svg#Geometria-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

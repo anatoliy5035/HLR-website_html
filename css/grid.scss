@@ -1,0 +1,187 @@
+//----- Extends
+@mixin clearfix() {
+    &:after {
+        content:'';
+        display:table;
+        clear:both;
+    }
+}
+@mixin border-box() {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+//----- Grid System
+$grid-spacing: 30px;
+$screen-min-sm: 768px;
+$screen-min-md: 992px;
+$screen-min-lg: 1200px;
+
+@mixin col-position($prefix-0,$prefix-1,$prefix-2,$prefix-3,$prefix-4,$prefix-5,$position-1,$position-2,$position-3) {
+  @for $i from 1 to 12+1 {
+    .col-#{$prefix-0}-#{$i}.#{$position-1},
+    .col-#{$prefix-1}-#{$i}.#{$position-1},
+    .col-#{$prefix-2}-#{$i}.#{$position-1},
+    .col-#{$prefix-3}-#{$i}.#{$position-1},
+    .col-#{$prefix-4}-#{$i}.#{$position-1},
+    .col-#{$prefix-5}-#{$i}.#{$position-1} {
+      vertical-align: $position-1;
+    }
+    .col-#{$prefix-0}-#{$i}.#{$position-2},
+    .col-#{$prefix-1}-#{$i}.#{$position-2},
+    .col-#{$prefix-2}-#{$i}.#{$position-2},
+    .col-#{$prefix-3}-#{$i}.#{$position-2},
+    .col-#{$prefix-4}-#{$i}.#{$position-2},
+    .col-#{$prefix-5}-#{$i}.#{$position-2} {
+      vertical-align: $position-2;
+    }
+    .col-#{$prefix-0}-#{$i}.#{$position-3},
+    .col-#{$prefix-1}-#{$i}.#{$position-3},
+    .col-#{$prefix-2}-#{$i}.#{$position-3},
+    .col-#{$prefix-3}-#{$i}.#{$position-3},
+    .col-#{$prefix-4}-#{$i}.#{$position-3},
+    .col-#{$prefix-5}-#{$i}.#{$position-3} {
+      vertical-align: $position-3;
+    }
+  }
+}
+
+@mixin col-inline($prefix) {
+    .col-#{$prefix}-1,
+    .col-#{$prefix}-2,
+    .col-#{$prefix}-3,
+    .col-#{$prefix}-4,
+    .col-#{$prefix}-5,
+    .col-#{$prefix}-6,
+    .col-#{$prefix}-7,
+    .col-#{$prefix}-8,
+    .col-#{$prefix}-9,
+    .col-#{$prefix}-10,
+    .col-#{$prefix}-11,
+    .col-#{$prefix}-12 {
+        position: relative;
+        display: inline-block;
+        min-height: 1px;
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+        font-size: 1rem;
+        @include border-box();
+    }
+    @for $i from 1 to 12+1 {
+        .col-#{$prefix}-#{$i} {
+            width: percentage(($i / 12));
+        }
+    }
+}
+
+@mixin responsive-inline($breakpoint,$prefix) {
+  @media (min-width: $breakpoint) {
+    @include col-inline($prefix);
+  }
+}
+
+@mixin col-cell($prefix) {
+    .col-#{$prefix}-1,
+    .col-#{$prefix}-2,
+    .col-#{$prefix}-3,
+    .col-#{$prefix}-4,
+    .col-#{$prefix}-5,
+    .col-#{$prefix}-6,
+    .col-#{$prefix}-7,
+    .col-#{$prefix}-8,
+    .col-#{$prefix}-9,
+    .col-#{$prefix}-10,
+    .col-#{$prefix}-11,
+    .col-#{$prefix}-12, {
+        position: relative;
+        display: table-cell;;
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+    }
+    @for $i from 1 to 12+1 {
+        .col-#{$prefix}-#{$i} {
+            width: percentage(($i / 12));
+        }
+    }
+}
+
+@mixin col-float($prefix) {
+    .col-#{$prefix}-1,
+    .col-#{$prefix}-2,
+    .col-#{$prefix}-3,
+    .col-#{$prefix}-4,
+    .col-#{$prefix}-5,
+    .col-#{$prefix}-6,
+    .col-#{$prefix}-7,
+    .col-#{$prefix}-8,
+    .col-#{$prefix}-9,
+    .col-#{$prefix}-10,
+    .col-#{$prefix}-11,
+    .col-#{$prefix}-12 {
+        position: relative;
+        float:left;
+        min-height: 1px;
+        padding-left: $grid-spacing/2;
+        padding-right: $grid-spacing/2;
+        @include border-box();
+    }
+    @for $i from 1 to 12+1 {
+        .col-#{$prefix}-#{$i} {
+            width: percentage(($i / 12));
+        }
+    }
+}
+
+@mixin responsive-float($breakpoint,$prefix) {
+  @media (min-width: $breakpoint) {
+    @include col-float($prefix);
+  }
+}
+
+.container {
+    position: relative;
+    max-width: (1325+$grid-spacing);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $grid-spacing/2;
+    padding-right: $grid-spacing/2;
+    @include clearfix();
+}
+
+/*-------inline col!--------*/
+.row-inline {
+    position: relative;
+    font-size: 0;
+    margin-left: -$grid-spacing/2;
+    margin-right: -$grid-spacing/2;
+    @include clearfix();
+}
+@include col-inline(inline);
+@include col-inline(inline-xs);
+@include responsive-inline($screen-min-sm, inline-sm);
+@include responsive-inline($screen-min-md, inline-md);
+@include responsive-inline($screen-min-lg, inline-lg);
+
+/*-------table col!--------*/
+.row-table {
+    position: relative;
+    display: table;
+    width: 100%;
+}
+@include col-cell(cell);
+
+/*--------position---------*/
+@include col-position(inline,inline-xs,inline-sm,inline-md,inline-lg,cell,top,middle,bottom);
+
+/*-------float col!--------*/
+.row {
+    position: relative;
+    margin-left: -$grid-spacing/2;
+    margin-right: -$grid-spacing/2;
+    @include clearfix();
+}
+@include col-float(xs);
+@include responsive-float($screen-min-sm, sm);
+@include responsive-float($screen-min-md, md);
+@include responsive-float($screen-min-lg, lg);

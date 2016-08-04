@@ -1,0 +1,20 @@
+    @@include('templates/partials/head.html')
+
+    @@include('templates/partials/header.html', {
+        "link" : "index-1.html"
+    })
+
+    <!--main!-->
+    <main>
+        @@include('templates/main/main-slider.html')
+        @@include('templates/main/main-events.html')
+        @@include('templates/main/main-news.html')
+        @@include('templates/main/main-blog.html')
+        @@include('templates/partials/delivery-form.html')
+    </main>
+    <!--main!-->
+
+    @@include('templates/partials/footer.html')
+
+</body>
+</html>

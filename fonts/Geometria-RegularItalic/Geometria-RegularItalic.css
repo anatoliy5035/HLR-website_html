@@ -1,0 +1,14 @@
+/* Copyright (c) 2012 by Vyacheslav Kirilenko, Gayane Bagdasaryan. All rights reserved. */
+
+@font-face {
+	font-family: 'GeometriaItalic';
+	src: url('Geometria-RegularItalic.eot');
+	src:
+	     url('Geometria-RegularItalic.eot?#iefix') format('embedded-opentype'),
+	     url('Geometria-RegularItalic.woff2') format('woff2'),
+	     url('Geometria-RegularItalic.woff') format('woff'),
+	     url('Geometria-RegularItalic.ttf') format('truetype'),
+	     url('Geometria-RegularItalic.svg#Geometria-Italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
