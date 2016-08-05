@@ -38,9 +38,56 @@ jQuery(function() {
                 slidesToShow: slides_to_show || 3,
                 slidesToScroll: slides_to_scroll || 2,
                 adaptiveHeight: true,
-                arrows: false,
-                dots: true
+                arrows: true,
+                dots: false,
+                responsive: [
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: slides_to_show || 3,
+                        slidesToScroll: slides_to_scroll || 2,
+                        infinite: true,
+                        dots: false
+                      }
+                    },
+                    {
+                      breakpoint: 667,
+                      settings: {
+                        slidesToShow: slides_to_show-1 || 2,
+                        slidesToScroll: slides_to_scroll-1 || 1
+                      }
+                    },
+                    {
+                      breakpoint: 568,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                      }
+                    }
+                  ]
             });
+        });
+
+        jQuery('.js-carousel-prev').click(function(event) {
+            event.preventDefault();
+
+            var carousel = jQuery(this).closest('.section-body-carousel').find('.slick-initialized');
+
+            if (carousel.length) {
+                carousel.find('.slick-prev').click();
+            }
+
+        });
+
+        jQuery('.js-carousel-next').click(function(event) {
+            event.preventDefault();
+
+            var carousel = jQuery(this).closest('.section-body-carousel').find('.slick-initialized');
+
+            if (carousel.length) {
+                carousel.find('.slick-next').click();
+            }
+
         });
     }
 

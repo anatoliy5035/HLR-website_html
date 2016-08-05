@@ -1,7 +1,7 @@
 <!--header!-->
 <header class="header">
     <div class="container">
-        <div class="row-inline">
+        <div class="row-inline header-row">
             <div class="col-inline-xs-3 middle header-left">
                 <figure class="header-logo" itemscope itemtype="http://schema.org/Organization">
                     <meta itemprop="name" content="ООО ХИМЛАБОРРЕАКТИВ">
@@ -33,6 +33,13 @@
                         </li>
                     </ul>
                 </div>
+                <div class="header-search">
+                    <form>
+                        <input type="text" name="q" placeholder="Поиск..." autocomplete="off">
+                        <button type="submit"></button>
+                    </form>
+                    @@include('templates/partials/live-search.html')
+                </div>
             </div>
             <div class="col-inline-xs-5 middle header-right">
                 <div class="header-right-group">
@@ -40,7 +47,7 @@
                         <div class="header-phone"><a href="tel:+380 (44) 494 42 42">+380 (44) 494 42 42</a></div>
                         <div class="header-email"><a href="mailto:sales@hlr.com.ua">sales@hlr.com.ua</a></div>
                     </div>
-                    <button id="js-toggle-search" type="button" class="header-toggle-search"></button>
+                    <button id="js-open-search" type="button" class="header-toggle-search"></button>
                     <div class="dropdown dropdown-lang">
                        <button type="button"data-dropdown class="dropdown-button">Ua</button>
                        <div class="dropdown-menu">
@@ -55,10 +62,12 @@
                    </div>
                    <div class="header-nav">
                        <button id="js-open-menu" type="button" class="navicon"></button>
+                       <button type="button" class="navicon-close"></button>
                    </div>
                 </div>
             </div>
         </div>
     </div>
+    @@include('templates/partials/header-menu.html')
 </header>
 <!--header!-->

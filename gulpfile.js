@@ -25,9 +25,9 @@ var js = [
     'js/toastr.min.js', //end jq plugins
     'js/dropdown.js',
     'js/popup.js', //end my plugins
-    //'js/header.js',
+    'js/header.js',
     //'js/auth.js',
-    //'js/search.js',
+    'js/search.js',
     'js/delivery-form.js',
     'js/sliders.js',
     'js/script.js'

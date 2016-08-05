@@ -18,6 +18,7 @@ jQuery(function() {
         submitHandler: function(form) {
             if (true) {
                 toastr.success('Успех');
+                jQuery(form).reset();
             } else {
                 toastr.error('Ошибка');
             }

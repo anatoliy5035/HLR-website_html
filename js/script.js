@@ -70,8 +70,8 @@
             };
         }
 
-        //Header.init();
-        //Search.init();
+        Header.init();
+        Search.init();
         Popup.init();
         //Auth.init();
 

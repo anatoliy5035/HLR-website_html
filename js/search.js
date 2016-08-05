@@ -2,9 +2,18 @@
 
 var Search = {
 
-    init: function() {
+    init : function() {
         jQuery('.header-search button[type=submit]').val('').prop('disabled', true);
         this.events();
+    },
+
+    showSearch : function() {
+        jQuery('body').addClass('search-open');
+        jQuery('.header-nav .navicon-close').attr('id', 'js-close-search');
+    },
+
+    hideSearch : function() {
+        jQuery('body').removeClass('search-open');
     },
 
     goUp : function(container) {
@@ -93,5 +102,16 @@ var Search = {
                 }
             }
         });
+
+        jQuery('#js-open-search').on('click', function(event) {
+            event.preventDefault();
+            Search.showSearch();
+        });
+
+        jQuery('.header-nav').on('click', '#js-close-search', function(event) {
+            event.preventDefault();
+            Search.hideSearch();
+        });
+
     } //end events
 };
