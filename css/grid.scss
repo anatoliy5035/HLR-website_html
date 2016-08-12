@@ -93,7 +93,7 @@ $screen-min-lg: 1200px;
     .col-#{$prefix}-9,
     .col-#{$prefix}-10,
     .col-#{$prefix}-11,
-    .col-#{$prefix}-12, {
+    .col-#{$prefix}-12 {
         position: relative;
         display: table-cell;;
         padding-left: $grid-spacing/2;
