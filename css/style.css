@@ -454,9 +454,9 @@ time {
       line-height: 1;
       background: transparent;
       opacity: 0;
-      -webkit-transition: opacity 0.5s;
-      -moz-transition: opacity 0.5s;
-      -o-transition: opacity 0.5s;
+      -webkit-transition: opacity 0.3s;
+      -moz-transition: opacity 0.3s;
+      -o-transition: opacity 0.3s;
       position: absolute;
       top: 0;
       left: 0;
