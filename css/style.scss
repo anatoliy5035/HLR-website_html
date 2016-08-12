@@ -517,6 +517,7 @@ time {
         list-style-type: none;
     }
     li {
+
         position: relative;
         display: inline-block;
         vertical-align: middle;
@@ -540,26 +541,55 @@ time {
     .last {
         font-size: 0;
         line-height: 1;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        text-indent: -9999px;
         span,
         a {
             display: inline-block;
-            width: 45px;
-            height: 45px;
             font-size: 0;
             line-height: 1;
-            border-radius: 50%;
-            border: 1px solid #d1d1d1;
             background: transparent;
-            @include transition(all);
-            &:hover {
-                border-color: $blue-color;
-            }
+            opacity: 0;
+            -webkit-transition: opacity 0.5s;
+            -moz-transition:    opacity 0.5s;
+            -o-transition:      opacity 0.5s;
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
         }
     }
     .first {
         margin-right: 30px;
+        @include sprite(-187px, -260px);
+        a {
+            @include sprite(-243.5px, -258.8px);
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+
+        }
+    }
+
+    .last {
+        @include sprite(-187px, -260px);
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        a {
+            @include sprite(-243.5px, -258.8px);
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+        }
     }
 }
+.first:hover a , .last:hover a{
+    opacity: 1;
+}
+
 /*---------Pagination---------*/
 
 /*---------Forms---------*/
@@ -2270,6 +2300,69 @@ select::-ms-expand{
     }
 
 }
+/*---------Team---------*/
+.our-team {
+    .pagination {
+        padding-top: 0;
+    }
+}
+
+.team-item {
+    font-size: 0;
+    line-height: 1;
+    height: 237px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: content-box;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    display: block;
+    @include transition(all);
+    &:hover {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.team-item-figure {
+    border-bottom: 4px solid $active-color;
+}
+
+.team-item-name {
+    font-size: 1.125rem;
+    padding: 20px 0 10px 0;
+}
+
+.team-item-position {
+    font-size: 1rem;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #dbdbdb;
+    color: #535353;
+}
+
+.team-item-speciality {
+    line-height: 15px;
+    color: #535353;
+    padding: 15px 0 30px 0;
+    font-size: 0.875rem;
+}
+
+.section-body-team {
+    padding-top: 50px;
+}
+
+.item-container {
+    padding: 0 39px 25%;
+}
+
+/*---------Team---------*/
+
 
 @media (max-width: 959px) {
 }
@@ -2573,9 +2666,21 @@ select::-ms-expand{
             margin-right: 10px;
         }
     }
+    .section-header h1, .section-title {
+        margin-bottom: 10px;
+    }
+
+    .item-container {
+        padding: 0 39px 13%;
+    }
+
 }
 
 @media (max-width: 420px) {}
-@media (max-width: 360px) {}
-@media (max-width: 320px) {}
+@media (max-width: 360px) {
+
+}
+@media (max-width: 320px) {
+
+}
 /*-----------Media-----------*/

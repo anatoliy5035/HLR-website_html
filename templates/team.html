@@ -1,0 +1,81 @@
+@@include('templates/partials/head.html')
+
+@@include('templates/partials/header.html', {
+"link" : "index.html"
+})
+
+<!--main!-->
+<main>
+    @@include('templates/partials/breadcrumbs.html', {
+    "links" : {
+    "main" : "Главная",
+    "current" : "Наша команда"
+    }
+    })
+    <section class="our-team">
+        <div class="container">
+            <!--our team-->
+            <div class="section-header">
+                <h1>Наша команда</h1>
+                <div class="section-menu">
+                    <ul class="section-menu-list">
+                        <li class="section-menu-child">
+                            <div class="dropdown custom-dropdown">
+                                <button type="button"data-dropdown class="dropdown-button"><span class="dropdown-button-title">Выберите отрасль</span></button>
+                                <div class="dropdown-menu">
+                                    <ul class="dropdown-menu-list">
+                                        <li class="dropdown-menu-child"><button type="button" class="dropdown-menu-button">Химия и Строительство</button></li>
+                                        <li class="dropdown-menu-child"><button type="button" class="dropdown-menu-button">Медицина</button></li>
+                                        <li class="dropdown-menu-child"><button type="button" class="dropdown-menu-button">Фармацевтика</button></li>
+                                        <li class="dropdown-menu-child"><button type="button" class="dropdown-menu-button">Агро</button></li>
+                                        <li class="dropdown-menu-child"><button type="button" class="dropdown-menu-button">Госконтроль качества</button></li>
+                                        <li class="dropdown-menu-child"><button type="button" class="dropdown-menu-button">Пищевая промышленность</button></li>
+                                        <li class="dropdown-menu-child"><button type="button" class="dropdown-menu-button">Тяжелая промышленность</button></li>
+                                        <li class="dropdown-menu-child"><button type="button" class="dropdown-menu-button">ТЭК</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--items of team-->
+            <div class="section-body-team">
+                <div class="row">
+                    <div class="col-md-3 col-xs-12 col-sm-6">
+                        @@include('templates/partials/team-item.html')
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6">
+                        @@include('templates/partials/team-item.html')
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6">
+                        @@include('templates/partials/team-item.html')
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6">
+                        @@include('templates/partials/team-item.html')
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6">
+                        @@include('templates/partials/team-item.html')
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6">
+                        @@include('templates/partials/team-item.html')
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6">
+                        @@include('templates/partials/team-item.html')
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6">
+                        @@include('templates/partials/team-item.html')
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--catalog!-->
+        @@include('templates/partials/pagination.html')
+    </section>
+</main>
+<!--main!-->
+
+@@include('templates/partials/footer.html')
+
+</body>
+</html>

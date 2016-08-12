@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
@@ -43,8 +43,8 @@ gulp.task('html', function() {
 });
 
 gulp.task('sass', function () {
-    return sass('css/*.scss')
-        .on('error', sass.logError)
+    return gulp.src('css/*.scss')
+        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('css/'));
 });
 
