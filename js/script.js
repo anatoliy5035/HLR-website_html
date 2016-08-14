@@ -70,14 +70,6 @@
             };
         }
 
-        //video play
-        $('.play').on('click', function () {
-            var video = $('.video video');
-            var mask = $('.mask-video');
-            mask.css('display','none');
-            video[0].play();
-        });
-
         Header.init();
         Search.init();
         Popup.init();

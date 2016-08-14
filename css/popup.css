@@ -1,24 +1,24 @@
 .popup-open {
-  overflow: hidden; }
+    overflow: hidden; }
 
 .popup-container {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99991;
-  -webkit-overflow-scrolling: touch;
-  -webkit-transform: translate(0, -100%);
-  -ms-transform: translate(0, -100%);
-  -o-transform: translate(0, -100%);
-  transform: translate(0, -100%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  outline: 0; }
-  .popup-container.active {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    outline: 0; }
+.popup-container.active {
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-transform: translate(0, 0);
@@ -27,89 +27,26 @@
     transform: translate(0, 0); }
 
 .popup {
-  position: relative;
-  max-width: 540px;
-  margin: 10% auto; }
-  .popup .popup-close {
+    position: relative;
+    max-width: 850px;
+    margin: 10% auto;
+}
+.popup .popup-close {
     position: absolute;
-    top: 15px;
-    right: -15px;
-    z-index: 1; }
+    top: 1rem;
+    right: 1rem; }
 
 .popup-content {
-  position: relative;
-  padding: 20px 0 0;
-  background-color: #fff;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  outline: 0; }
+    position: relative;
+    padding: 1.25rem;
+    outline: 0; }
 
 .popup-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 9999;
-  background: rgba(0,0,0,.60); }
-
- .popup-title {
-     font-family: "Courier New";
-     font-style: normal;
-     font-variant: normal;
-     font-weight: bold;
-     font-size: 1.5rem;
-     line-height: 1.25;
-     text-transform: uppercase;
- }
- .popup-close {
-     position: relative;
-     display: block;
-     width: 40px;
-     height: 40px;
-     background: #445136;
-     border: none;
-     box-shadow: none;
-     border-radius: 0;
-     outline: none;
-     text-decoration: none;
-    -webkit-transition: opacity .3s ease 0s;
-    transition: opacity .3s ease 0s;
- }
-  .popup-close:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 25px;
-      height: 25px;
-      background: url('../images/sprite.svg') -75px -58px no-repeat;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-  }
-  .popup-close:hover {
-      opacity: 0.75;
-  }
-  .popup-header,
-  .popup-body{
-      padding-left: 40px;
-      padding-right: 40px;
-  }
-  .popup-body {
-      padding-top: 10px;
-      padding-bottom: 10px;
-  }
-  .popup-footer {
-      padding-top: 15px;
-  }
-  #login-popup .popup-body,
-  #registration-popup .popup-body {
-      padding-bottom: 0;
-  }
-  #video-popup .popup-content {
-      padding: 20px;
-  }
-  #video-popup .popup-body {
-      padding: 0;
-  }
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+    opacity: 0.7; }
