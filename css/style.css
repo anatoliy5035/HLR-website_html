@@ -2189,23 +2189,16 @@ select::-ms-expand {
 
 /*---------Team---------*/
 /*---------Info all---------*/
-.article-wrap {
-  margin-bottom: 80px; }
+.all-info {
+  padding-bottom: 50px; }
+  .all-info .video-container {
+    margin-top: 50px; }
 
 .right-float {
   float: right; }
 
-.article-header {
-  padding-top: 5%;
-  line-height: 22px; }
-
 .article-body {
   padding: 0 2.5% 0; }
-  .article-body p {
-    margin-bottom: 19px; }
-
-.image-with-caption-container {
-  width: 100%; }
 
 .image-with-caption img {
   display: block; }
@@ -2226,32 +2219,28 @@ select::-ms-expand {
 .article-listing {
   padding-top: 2%; }
 
-.list-container {
-  padding-left: 27px; }
-  .list-container li {
-    margin-bottom: 21px;
-    position: relative;
-    font-size: 1.125rem; }
-    .list-container li::before {
-      content: '';
-      position: absolute;
-      top: 8px;
-      right: 103%;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #f5f146; }
+.article li {
+  margin-bottom: 21px;
+  position: relative; }
+  .article li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 103%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #f5f146; }
 
-.list-with-numbers {
-  counter-reset: my-badass-counter;
-  padding-left: 36px; }
+.article dl {
+  counter-reset: my-badass-counter; }
 
-.list-with-numbers dt {
+.article dt {
   position: relative;
   margin-bottom: 21px; }
-  .list-with-numbers dt:first-child::before {
+  .article dt:first-child::before {
     text-indent: 7px; }
-  .list-with-numbers dt::before {
+  .article dt::before {
     content: counter(my-badass-counter);
     counter-increment: my-badass-counter;
     position: absolute;
@@ -2273,13 +2262,12 @@ select::-ms-expand {
 .article-footer {
   padding-top: 3.4%; }
 
-.footer-info-text {
+.all-info blockquote {
   width: 86%;
-  margin: 0 auto;
-  padding: 8.5% 0; }
-  .footer-info-text p {
+  margin: 0 auto; }
+  .all-info blockquote p {
     position: relative; }
-    .footer-info-text p::before, .footer-info-text p::after {
+    .all-info blockquote p::before, .all-info blockquote p::after {
       content: '“';
       display: block;
       position: absolute;
@@ -2288,15 +2276,12 @@ select::-ms-expand {
       width: 24px;
       height: 24px;
       top: -30px; }
-    .footer-info-text p::after {
+    .all-info blockquote p::after {
       left: 99%;
       top: 122%; }
 
 /*---------Info all---------*/
 /*---------TAble---------*/
-.footer-table {
-  overflow-x: auto; }
-
 .table-component {
   width: 100%;
   max-width: 100%; }
@@ -2410,9 +2395,6 @@ select::-ms-expand {
   font-size: 1.125rem;
   line-height: 22px; }
 
-.quality-article {
-  padding-top: 7%; }
-
 .quality-header {
   font-family: 'Geometria';
   font-weight: bold;
@@ -2507,6 +2489,12 @@ select::-ms-expand {
 
 /*---------Quality---------*/
 /*---------Social---------*/
+.social.article li::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 101%; }
+
 .today {
   width: 93%;
   margin: 0 auto;
@@ -2530,15 +2518,9 @@ select::-ms-expand {
   margin: 0 auto; }
 
 .suggest {
-  padding-top: 2%;
   margin: 0 auto; }
-  .suggest h2 {
-    font-family: GeometriaLight;
-    font-weight: bold; }
-  .suggest .list-container {
-    padding-left: 80px; }
-    .suggest .list-container li {
-      font-size: inherit; }
+  .suggest .list-container li {
+    font-size: inherit; }
   .suggest .list-container li::before {
     width: 11px;
     height: 11px; }
@@ -2550,20 +2532,13 @@ select::-ms-expand {
   padding-bottom: 4%; }
 
 /*---------Social---------*/
-@media (min-width: 769px) {
-  .image-with-caption-container {
-    width: 90%; }
-  .image-with-caption-container {
-    float: right; } }
-
 @media (min-width: 1024px) {
   .item-advantage {
     margin-bottom: 79px; }
   .quality-container {
     padding: 0 57px; }
-  .article-header img {
-    display: block;
-    margin: 0px auto; }
+  .article img {
+    display: block; }
   .text-article-footer {
     margin-left: -18px; }
   .arcicle-footer-image img {
@@ -2571,6 +2546,9 @@ select::-ms-expand {
     margin: 0 auto; } }
 
 @media (max-width: 768px) {
+  .article p {
+    width: 100% !important;
+    float: none !important; }
   .suggest .list-container {
     padding-left: 41px; }
   .floating-image {
@@ -2605,11 +2583,21 @@ select::-ms-expand {
     display: none; } }
 
 @media (max-width: 666px) {
-  .list-container li {
-    font-size: 1rem; }
-  .list-with-numbers-container {
-    font-size: 1rem;
-    line-height: 1.22; }
+  .article dt::before {
+    font-size: 13px;
+    line-height: 21px; }
+  .all-info table:first-of-type {
+    padding: 0 !important; }
+  .article table {
+    float: none !important; }
+  .article img {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 auto !important; }
+  .article div, .article span, .article ul, .article dl, .article p, .article blockquote, .article h3, .article h4, .article h2, .article table {
+    width: 100% !important; }
+  .article ul, .article dl {
+    padding: 0 12px !important; }
   .today {
     width: 100%; }
   .soc-responsibility {
@@ -2618,13 +2606,11 @@ select::-ms-expand {
     padding-top: 0; }
   .events-item {
     margin-bottom: 30px; }
-  .suggest .list-container {
-    padding-left: 21px; }
   .article {
     font-size: 1rem;
     line-height: 1.22; }
   .article h2 {
-    font-size: 1.125rem; }
+    font-size: 1rem; }
   .policy {
     padding-top: 10%; }
   .advantage-title {
@@ -2644,13 +2630,6 @@ select::-ms-expand {
   .title-listing {
     text-align: center;
     font-size: 1.125rem; }
-  .article-header img {
-    padding: 0;
-    margin: 0 auto;
-    display: block;
-    float: none; }
-  .image-with-caption-container {
-    text-align: center; }
   .footer-dev {
     font-size: 0.75rem; }
   .footer-dev-link,
@@ -2709,11 +2688,9 @@ select::-ms-expand {
     width: 100%; }
   .footer-menu {
     margin: 0 0 5px; }
-  .footer-info-text {
-    width: 100%; }
-  .footer-info-text p::before {
+  .all-info blockquote p::before {
     top: -52px; }
-  .footer-info-text p::after {
+  .all-info blockquote p::after {
     left: 92%;
     top: 85%; }
   .footer-info-text {
