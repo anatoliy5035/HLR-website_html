@@ -1,12 +1,12 @@
 @@include('templates/partials/head.html')
 
 @@include('templates/partials/header.html', {
-"link" : "next.html"
+"link" : "article.html"
 })
 
 <!--main!-->
 <main>
-    <div class="page">
+    <div class="page social">
         @@include('templates/partials/breadcrumbs.html', {
         "links" : {
         "main" : "Главная",
@@ -15,10 +15,10 @@
         })
 
         <div class="container">
-            <article class="social article clearfix">
-                <div class="section-header">
-                    <h1>Социальная ответственность</h1>
-                </div>
+            <article class="article clearfix">
+                <h1 class="section-title">
+                    <span>Социальная ответственность</span>
+                </h1>
                 <p style="width: 93%;margin: 0 auto;padding: 4% 0 3%;">
                     Сегодня все большее количество предприятий, организаций, ученых, практиков и просто любознательных
                     людей интересуются вопросами корпоративной социальной ответственности (КСО), или, как ее по-другому
@@ -82,78 +82,80 @@
                         </ul>
                 </div>
             </article>
+        </div>
             <section class="quality-items">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <section class="events-item">
-                            <header>
-                                <figure class="events-item-image" style="background: url(images/admin/control-1.jpg);">
-                                    <a href="javascript:;" tabindex="0"></a>
-                                </figure>
-                                <div class="events-item-title">Контроль качества от Leica</div>
-                            </header>
-                            <article>
-                                <p>Социальная ответственность означает способность организации или предприятия оценить
-                                    последствия своей деятельности для устойчивого социального развития общества. Социальная
-                                    ответственность — широкое понятие, охватывающее и такие проблемы, как экология, социальная
-                                    справедливость, равноправие. Организации обязаны проявлять ответственность в трех областях —
-                                    финансы, влияние их деятельности на общество и окружающую среду, воздействие на экологию.
-                                    Это относится не только к бизнесу, но и к правительственным, общественным и добровольческим
-                                    организациям </p>
-                            </article>
-                            <footer>
-                                <a href="javascript:;" class="active-button" tabindex="0">Подробнее</a>
-                            </footer>
-                        </section>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <section class="events-item">
-                            <header>
-                                <figure class="events-item-image" style="background: url(images/admin/control-2.jpg);">
-                                    <a href="javascript:;" tabindex="0"></a>
-                                </figure>
-                                <div class="events-item-title">Контроль качества от Leica</div>
-                            </header>
-                            <article>
-                                <p>Социальная ответственность означает способность организации или предприятия оценить
-                                    последствия своей деятельности для устойчивого социального развития общества. Социальная
-                                    ответственность — широкое понятие, охватывающее и такие проблемы, как экология, социальная
-                                    справедливость, равноправие. Организации обязаны проявлять ответственность в трех областях —
-                                    финансы, влияние их деятельности на общество и окружающую среду, воздействие на экологию.
-                                    Это относится не только к бизнесу, но и к правительственным, общественным и добровольческим
-                                    организациям </p>
-                            </article>
-                            <footer>
-                                <a href="javascript:;" class="active-button" tabindex="0">Подробнее</a>
-                            </footer>
-                        </section>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <section class="events-item">
-                            <header>
-                                <figure class="events-item-image" style="background: url(images/admin/control-3.jpg);">
-                                    <a href="javascript:;" tabindex="0"></a>
-                                </figure>
-                                <div class="events-item-title">Контроль качества от Leica</div>
-                            </header>
-                            <article>
-                                <p>Социальная ответственность означает способность организации или предприятия оценить
-                                    последствия своей деятельности для устойчивого социального развития общества. Социальная
-                                    ответственность — широкое понятие, охватывающее и такие проблемы, как экология, социальная
-                                    справедливость, равноправие. Организации обязаны проявлять ответственность в трех областях —
-                                    финансы, влияние их деятельности на общество и окружающую среду, воздействие на экологию.
-                                    Это относится не только к бизнесу, но и к правительственным, общественным и добровольческим
-                                    организациям </p>
-                            </article>
-                            <footer>
-                                <a href="javascript:;" class="active-button" tabindex="0">Подробнее</a>
-                            </footer>
-                        </section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <section class="events-item">
+                                <header>
+                                    <figure class="events-item-image" style="background: url(images/admin/control-1.jpg);">
+                                        <a href="javascript:;" tabindex="0"></a>
+                                    </figure>
+                                    <div class="events-item-title">Контроль качества от Leica</div>
+                                </header>
+                                <article>
+                                    <p>Социальная ответственность означает способность организации или предприятия оценить
+                                        последствия своей деятельности для устойчивого социального развития общества. Социальная
+                                        ответственность — широкое понятие, охватывающее и такие проблемы, как экология, социальная
+                                        справедливость, равноправие. Организации обязаны проявлять ответственность в трех областях —
+                                        финансы, влияние их деятельности на общество и окружающую среду, воздействие на экологию.
+                                        Это относится не только к бизнесу, но и к правительственным, общественным и добровольческим
+                                        организациям </p>
+                                </article>
+                                <footer>
+                                    <a href="javascript:;" class="active-button" tabindex="0">Подробнее</a>
+                                </footer>
+                            </section>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <section class="events-item">
+                                <header>
+                                    <figure class="events-item-image" style="background: url(images/admin/control-2.jpg);">
+                                        <a href="javascript:;" tabindex="0"></a>
+                                    </figure>
+                                    <div class="events-item-title">Контроль качества от Leica</div>
+                                </header>
+                                <article>
+                                    <p>Социальная ответственность означает способность организации или предприятия оценить
+                                        последствия своей деятельности для устойчивого социального развития общества. Социальная
+                                        ответственность — широкое понятие, охватывающее и такие проблемы, как экология, социальная
+                                        справедливость, равноправие. Организации обязаны проявлять ответственность в трех областях —
+                                        финансы, влияние их деятельности на общество и окружающую среду, воздействие на экологию.
+                                        Это относится не только к бизнесу, но и к правительственным, общественным и добровольческим
+                                        организациям </p>
+                                </article>
+                                <footer>
+                                    <a href="javascript:;" class="active-button" tabindex="0">Подробнее</a>
+                                </footer>
+                            </section>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <section class="events-item">
+                                <header>
+                                    <figure class="events-item-image" style="background: url(images/admin/control-3.jpg);">
+                                        <a href="javascript:;" tabindex="0"></a>
+                                    </figure>
+                                    <div class="events-item-title">Контроль качества от Leica</div>
+                                </header>
+                                <article>
+                                    <p>Социальная ответственность означает способность организации или предприятия оценить
+                                        последствия своей деятельности для устойчивого социального развития общества. Социальная
+                                        ответственность — широкое понятие, охватывающее и такие проблемы, как экология, социальная
+                                        справедливость, равноправие. Организации обязаны проявлять ответственность в трех областях —
+                                        финансы, влияние их деятельности на общество и окружающую среду, воздействие на экологию.
+                                        Это относится не только к бизнесу, но и к правительственным, общественным и добровольческим
+                                        организациям </p>
+                                </article>
+                                <footer>
+                                    <a href="javascript:;" class="active-button" tabindex="0">Подробнее</a>
+                                </footer>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
-    </div>
 </main>
 <!--main!-->
 

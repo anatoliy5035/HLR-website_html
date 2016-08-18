@@ -340,15 +340,14 @@ figure {
     border: 1px solid $border-color;
     box-shadow: none;
     @include transition(all);
-    &:hover, &:focus {
+    &:hover, &:active, &:focus {
         text-decoration: none;
-    }
-    &:hover {
         border-color: $active-color;
         background: $active-color;
         box-shadow: 10px 6px 10px rgba(0,0,0,.17);
     }
 }
+
 .submit-button {
     position: relative;
     display: inline-block;
@@ -528,7 +527,7 @@ time {
 /*---------Breadcrumbs---------*/
 
 /*---------Pagination---------*/
-.pagination {
+.pagination, .navigate-arrows {
     padding: 75px 0;
     font-size: 1.125rem;
     line-height: 1;
@@ -1284,9 +1283,12 @@ select::-ms-expand{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    height: 30px;
+    width: 35px;
+    height: 32px;
+    margin: 0 auto;
     text-align: center;
+    @include sprite(-34px, -40px);
+
     img {
         display: block;
         margin: auto;
@@ -1296,6 +1298,38 @@ select::-ms-expand{
         height: auto;
     }
 }
+
+.slider-navigate-ico-1 {
+  background-position: -34px -40px !important;
+}
+
+.slider-navigate-ico-2 {
+  background-position: -86px -36px !important;
+}
+
+.slider-navigate-ico-3 {
+  background-position: -127px -39px !important;
+}
+
+.slider-navigate-ico-4 {
+  background-position: -175px -36px !important;
+}
+
+.slider-navigate-ico-5 {
+  background-position: -215px -36px !important;
+}
+
+.slider-navigate-ico-6 {
+  background-position: -264px -38px !important;
+}
+.slider-navigate-ico-7 {
+  background-position: -305px -34px !important;
+}
+.slider-navigate-ico-8 {
+  background-position: -349px -39px !important;
+}
+
+
 .slider-dots-title {
     margin: 5px 0 0;
     display: -webkit-box;
@@ -1312,24 +1346,26 @@ select::-ms-expand{
     margin: auto;
     word-break: break-word;
 }
-.section-header {
+
+.section-title {
     position: relative;
     padding: 50px 0 0;
     text-align: center;
     &:after {
-        content: '';
-        display: table;
-        clear: both;
+      content: '';
+      display: table;
+      clear: both;
     }
-}
-.section-title,
-.section-header h1 {
-    display: inline-block;
+    span  {
+      border-bottom: 2px solid $active-color;
+      line-height: 28px;
+    }
+
     font-size: 1.875rem;
     line-height: 1;
     text-transform: uppercase;
     @include font-bold;
-    border-bottom: 2px solid $active-color;
+
     &.no-float {
         float: none;
     }
@@ -1442,6 +1478,12 @@ select::-ms-expand{
     time {
         @include font-light;
     }
+}
+.events-arrows {
+  li {
+    margin: 0 32px;
+  }
+
 }
 .events-item-title {
     margin: 20px 0 0;
@@ -1931,9 +1973,8 @@ select::-ms-expand{
 /*-----------Page-----------*/
 .page {
     padding: 40px 0 0;
-    .section-header {
-        padding: 20px 0 0;
-    }
+    overflow-x: hidden;
+
 }
 /*-----------Page-----------*/
 
@@ -2457,6 +2498,10 @@ select::-ms-expand{
             width: 100%;
         }
     }
+    p {
+        font-weight: bold;
+        font-size: 16px;
+    }
 }
 
 .title-listing {
@@ -2479,7 +2524,7 @@ select::-ms-expand{
             content: '';
             position: absolute;
             top: 8px;
-            right: 103%;
+            left: -22px;
             width: 9px;
             height: 9px;
             border-radius: 50%;
@@ -2500,7 +2545,7 @@ select::-ms-expand{
             counter-increment: my-badass-counter;
             position: absolute;
             top: 2px;
-            right: 102%;
+            left: -28px;
             width: 21px;
             height: 21px;
             border-radius: 50%;
@@ -2580,11 +2625,19 @@ select::-ms-expand{
 .table-component>thead>tr>td,
 .table-component>thead>tr>th {
     border-bottom: 2px solid #ebebeb;
-    padding: 36px 23px;
+    padding: 2.5% 1.7%;
     line-height: 1.42857143;
     vertical-align: middle;
     border-top: 1px solid #ddd;
 }
+.article-page .table-component {
+    width: 97%;
+    margin: 8% auto 2% auto;
+}
+.article-page article {
+  padding-bottom: 30px;
+}
+
 
 .footer-table {
     margin: 30px auto 54px auto;
@@ -2793,12 +2846,6 @@ select::-ms-expand{
 /*---------Quality---------*/
 
 /*---------Social---------*/
-.social.article li::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    right: 101%;
-}
 
 .today {
     width: 93%;
@@ -2850,6 +2897,209 @@ select::-ms-expand{
 /*---------Social---------*/
 
 
+/*---------article-page---------*/
+.article-page {
+    .video-container {
+        padding: 7% 0;
+    }
+    section.bg-grey {
+        background: white;
+        padding: 5% 0 3% 0;
+    }
+}
+.social-bar {
+    padding: 4.2% 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+}
+.evaluate-title {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 30px;
+}
+.useful-button {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px;
+    min-width: 180px;
+    font-size: 1.125rem;
+    line-height: 1;
+    margin-left: 4%;
+    text-align: center;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    @include font-light;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    @include transition(all);
+    background: $active-color;
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        box-shadow: 10px 6px 10px rgba(0,0,0,.17);
+    }
+    &:disabled  span{
+        color: white !important;
+
+    }
+    &:disabled {
+        background-color: #d9d2ff;
+        box-shadow: none;
+    }
+    &:disabled i {
+        opacity: 0.4;
+    }
+
+    span ,i{
+        vertical-align: middle;
+    }
+}
+.social-bar-inside {
+    width: 84%;
+    margin: 0 auto;
+}
+.useful-no {
+    background: $border-color;
+}
+.people-ico {
+    width: 23px;
+    height: 28px;
+    display: inline-block;
+    margin-left: 10px;
+    @include sprite(-400px, -179px);
+}
+.useful-count-yes,
+.useful-count-no{
+    font-size: 1.5rem;
+    color: #96943d;
+    display: inline-block;
+}
+.useful-count-no {
+    color: #a5a5a5;
+}
+
+.share-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 29px;
+}
+.share-social-button {
+    min-width: 120px;
+    color: white;
+    padding: 7px 33px;
+    display: inline-block;
+}
+.share-social-icon,
+.fb-share-count {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+.share-social-icon {
+    width: 35px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.share-social-button:hover,
+.share-social-button:active,
+.share-social-button:focus {
+    text-decoration: none;
+    color: white;
+}
+.fb-share-ico {
+    background-image: url('../../images/fb.svg');
+}
+.tw-share-ico {
+    background-image: url('../../images/tw.svg');
+}
+.vk-share-ico {
+    background-image: url('../../images/vk.svg');
+}
+.share-fb-wrap {
+    background: #1d3fbe;
+}
+.share-tw-wrap {
+    background-color: #38bae5;
+}
+.share-vk-wrap {
+    background-color: #1393b8;
+}
+.share-links {
+    li {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+    }
+}
+.article-comments {
+    padding: 3% 0 4% 0;
+}
+.comments-container {
+    h2 {
+        text-align: center;
+        padding-bottom: 8%;
+        font-family: 'Geometria';
+        font-weight: bold;
+    }
+    margin: 0 auto;
+    width: 50%;
+}
+.time {
+    text-align: right;
+    color: #9a9a9a;
+}
+.comment-name {
+    font-weight: bold;
+}
+.comment-item {
+    margin-bottom: 9%;
+}
+.footer-comment {
+    margin-top: 20px;
+}
+.add-coment {
+    padding: 39px 15px 60px 15px;
+    margin: 0 -15px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    h2 {
+        font-family: 'Geometria';
+        font-weight: bold;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+}
+.comment-form-container {
+    width: 50%;
+    margin: 0 auto;
+    textarea {
+        min-height: 158px;
+    }
+}
+.add-comment-button {
+    text-align: center;
+    .submit-button {
+        margin-top: 28px;
+    }
+}
+.also-interest {
+    padding: 52px 0 0 0;
+    background-color: #ebebeb;
+    .js-carousel-arrow  {
+        padding: 32px 0 50px 0;
+    }
+    .pagination {
+        padding: 0;
+    }
+}
+/*---------article-page---------*/
+
+
 @media (min-width: 769px) {
 
 }
@@ -2876,6 +3126,19 @@ select::-ms-expand{
 }
 
 @media (max-width: 768px) {
+    .comments-container, .comment-form-container {
+        width: 75%;
+    }
+    .evaluate, .share-links {
+        text-align: center;
+    }
+    .useful-button {
+        margin-left: 0;
+        margin-right: 4%;
+    }
+    .share-title {
+        margin-top: 34px;
+    }
     .article p {
         width: 100% !important;
         float: none !important;
@@ -2931,6 +3194,44 @@ select::-ms-expand{
 }
 
 @media (max-width: 666px) {
+    .image-with-caption {
+        width: 100% !important;
+        p {
+            font-size: 0.875rem;
+        }
+    }
+    .advantage-text {
+        font-size: 1rem;
+    }
+    .share-title ,
+    .comments-container h2,
+    .add-coment h2
+    {
+        font-size: 1.125rem;
+    }
+    .useful-button, .share-links li {
+        margin-bottom: 23px;
+        margin-right: 0;
+    }
+    .share-links li {
+        display: block;
+    }
+    .comment-form-container,
+    .comments-container {
+        width: 100%;
+    }
+    .article-page {
+        h2 {
+            margin-top: 5px !important;
+        }
+    }
+    .table-component {
+        display: block;
+        overflow: auto;
+    }
+    .article-page table {
+        padding: 0 !important;
+    }
     .article dt::before {
         font-size: 13px;
         line-height: 21px;
@@ -2945,9 +3246,9 @@ select::-ms-expand{
         img {
             width: 100% !important;
             float: none !important;
-            margin: 0 auto !important;
+            margin: 2%  0 !important;
         }
-        div ,span, ul, dl, p, blockquote , h3, h4, h2, table{
+        ul, dl, p, blockquote , h3, h4, h2, table{
             width: 100% !important;
         }
         ul , dl{
@@ -2973,8 +3274,8 @@ select::-ms-expand{
         font-size: 1rem;
         line-height: 1.22;
     }
-    .article h2 {
-        font-size: 1rem;
+    .page h2 {
+        font-size: 1.125rem;
     }
     .policy {
         padding-top: 10%;
@@ -2996,6 +3297,12 @@ select::-ms-expand{
   .video-wrap {
     min-height: 278px;
   }
+    .video-caption {
+        text-align: center;
+    }
+    .video-title {
+        margin-bottom: 20px;
+    }
     .list-with-numbers {
         padding-left: 21px;
     }
