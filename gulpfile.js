@@ -7,6 +7,7 @@ var rename = require("gulp-rename");
 var sourcemaps = require('gulp-sourcemaps');
 var fileinclude = require('gulp-file-include');
 
+
 var css = [
     'css/normalize.css',
     'css/grid.css',
@@ -14,7 +15,9 @@ var css = [
     'css/toastr.css',
     'css/dropdown.css',
     'css/popup.css',
-    'css/style.css'
+    'css/lightslider.css',
+    'css/style.css',
+    'css/media.css'
 ];
 
 var js = [
@@ -26,10 +29,12 @@ var js = [
     'js/dropdown.js',
     'js/popup.js', //end my plugins
     'js/header.js',
-    //'js/auth.js',
     'js/search.js',
     'js/delivery-form.js',
     'js/sliders.js',
+    'js/select.js',
+    'js/lightslider.js',
+    'js/map.js',
     'js/script.js'
 ];
 
@@ -76,5 +81,5 @@ gulp.task('watch', function () {
     gulp.watch(js, ['scripts']);
 });
 
-//gulp.task('default', ['html', 'sass', 'styles', 'scripts', 'watch']);
+
 gulp.task('default', ['html', 'styles', 'scripts', 'watch']);

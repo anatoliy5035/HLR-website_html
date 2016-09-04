@@ -15,7 +15,7 @@
 //----- Grid System
 $grid-spacing: 30px;
 $screen-min-sm: 768px;
-$screen-min-md: 992px;
+$screen-min-md: 1025px;
 $screen-min-lg: 1200px;
 
 @mixin col-position($prefix-0,$prefix-1,$prefix-2,$prefix-3,$prefix-4,$prefix-5,$position-1,$position-2,$position-3) {
@@ -153,6 +153,7 @@ $screen-min-lg: 1200px;
 .row-inline {
     position: relative;
     font-size: 0;
+    margin: 0 auto;
     margin-left: -$grid-spacing/2;
     margin-right: -$grid-spacing/2;
     @include clearfix();

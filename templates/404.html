@@ -1,0 +1,176 @@
+@@include('templates/partials/head.html')
+
+@@include('templates/partials/header.html', {
+"link" : "contacts.html"
+})
+
+<!--main!-->
+<main>
+    <div class="page error-page">
+
+        <section class="error-block">
+            <div class="container">
+                <div class="error">
+                    <img src="images/404.png"/>
+                </div>
+                <h1 class="error-title">Страница не существует</h1>
+                <p>Проверьте правильность ссылки, перейдите в нужный раздел меню или воспользуйтесь поиском.
+                    Вы также можете написать нам письмо с помощью формы обратной связи
+                </p>
+            </div>
+        </section>
+        <section class="callback">
+            <div class="section-header">
+                <h1 class="section-title">
+                    <span>Обратная связь</span>
+                </h1>
+            </div>
+            <div class="comment-form-container callback-form ">
+                <form name="comment-form" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Ваше Имя">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-row">
+                                <input type="email" name="email" placeholder="E-mail">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-row">
+                                <input type="tel" name="phone" placeholder="Телефон">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-row">
+                                <input type="text" name="organization" placeholder="Организация">
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="textarea-row">
+                                <textarea name="textMessage" id="comment" placeholder="Текст сообщения"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="add-comment-button">
+                                <button type="submit" class="submit-button">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!--section!-->
+        <section class="also-interest-blog">
+            <div class="container">
+                <!--header!-->
+                <div class="section-header">
+                    <h1 class="section-title">
+                        <span>Вас также может заинтересовать</span>
+                    </h1>
+                <!--header!-->
+                <!--body!-->
+                <div class="section-body">
+                    <!--body!-->
+                    <div class="section-body-carousel">
+                        <div data-show="3" data-scroll="2" class="js-carousel">
+                            <div>
+                                <section class="main-blog-item" style="background: url('images/admin/image-890-590.jpg');">
+                                    <div class="main-blog-item-inside">
+                                        <header>
+                                            <time datetime="2015-11-23">23.11.2015</time>
+                                            <div class="main-blog-item-title">
+                                                Гематологический анализатор BC-3000 Plus по акционной цене
+                                            </div>
+                                        </header>
+                                        <article>
+                                            <p>В фармацевтическом производстве важную роль играют исследования контроля качества с помощью микроскопов, включая сами микроскопы, камеры для документирования и программное обеспечение для визуализации и анализа результатов. Статья о решениях Leica Microsystems для раздела "Аналитический контроль" журнала «Фармацевтическая отрасль», октябрь № 5 (52) 2015.</p>
+                                        </article>
+                                        <footer>
+                                            <a href="javascript:;" class="main-blog-item-button">Подробнее</a>
+                                        </footer>
+                                    </div>
+                                </section>
+                            </div>
+                            <div>
+                                <section class="main-blog-item" style="background: url('images/admin/image-890-590.jpg');">
+                                    <div class="main-blog-item-inside">
+                                        <header>
+                                            <time datetime="2015-11-23">23.11.2015</time>
+                                            <div class="main-blog-item-title">
+                                                Гематологический анализатор BC-3000 Plus по акционной цене
+                                            </div>
+                                        </header>
+                                        <article>
+                                            <p>В фармацевтическом производстве важную роль играют исследования контроля качества с помощью микроскопов, включая сами микроскопы, камеры для документирования и программное обеспечение для визуализации и анализа результатов. Статья о решениях Leica Microsystems для раздела "Аналитический контроль" журнала «Фармацевтическая отрасль», октябрь № 5 (52) 2015.</p>
+                                        </article>
+                                        <footer>
+                                            <a href="javascript:;" class="main-blog-item-button">Подробнее</a>
+                                        </footer>
+                                    </div>
+                                </section>
+                            </div>
+                            <div>
+                                <section class="main-blog-item" style="background: url('images/admin/image-890-590.jpg');">
+                                    <div class="main-blog-item-inside">
+                                        <header>
+                                            <time datetime="2015-11-23">23.11.2015</time>
+                                            <div class="main-blog-item-title">
+                                                Гематологический анализатор BC-3000 Plus по акционной цене
+                                            </div>
+                                        </header>
+                                        <article>
+                                            <p>В фармацевтическом производстве важную роль играют исследования контроля качества с помощью микроскопов, включая сами микроскопы, камеры для документирования и программное обеспечение для визуализации и анализа результатов. Статья о решениях Leica Microsystems для раздела "Аналитический контроль" журнала «Фармацевтическая отрасль», октябрь № 5 (52) 2015.</p>
+                                        </article>
+                                        <footer>
+                                            <a href="javascript:;" class="main-blog-item-button">Подробнее</a>
+                                        </footer>
+                                    </div>
+                                </section>
+                            </div>
+                            <div>
+                                <section class="main-blog-item" style="background: url('images/admin/image-890-590.jpg');">
+                                    <div class="main-blog-item-inside">
+                                        <header>
+                                            <time datetime="2015-11-23">23.11.2015</time>
+                                            <div class="main-blog-item-title">
+                                                Гематологический анализатор BC-3000 Plus по акционной цене
+                                            </div>
+                                        </header>
+                                        <article>
+                                            <p>В фармацевтическом производстве важную роль играют исследования контроля качества с помощью микроскопов, включая сами микроскопы, камеры для документирования и программное обеспечение для визуализации и анализа результатов. Статья о решениях Leica Microsystems для раздела "Аналитический контроль" журнала «Фармацевтическая отрасль», октябрь № 5 (52) 2015.</p>
+                                        </article>
+                                        <footer>
+                                            <a href="javascript:;" class="main-blog-item-button">Подробнее</a>
+                                        </footer>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <ul class="events-arrows buttons-carousel navigate-arrows">
+                            <li class="first js-carousel-prev"><a href="javascript:;" rel="prev">»</a></li>
+                            <li class="last js-carousel-next"><a href="javascript:;" rel="next">»</a></li>
+                        </ul>
+                    </div>
+                    <!--body!-->
+                </div>
+                <!--body!-->
+            </div>
+                </div>
+        </section>
+        <!--section!-->
+
+
+    </div>
+</main>
+<!--main!-->
+
+
+@@include('templates/partials/footer.html')
+
+
+</body>
+</html>

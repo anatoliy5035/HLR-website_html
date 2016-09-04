@@ -1,0 +1,127 @@
+@@include('templates/partials/head.html')
+
+@@include('templates/partials/header.html', {
+"link" : "camera.html"
+})
+
+<!--main!-->
+<main>
+    <div class="page">
+        @@include('templates/partials/breadcrumbs.html', {
+        "links" : {
+        "main" : "Главная",
+        "current" : "Регистрационные документы"
+        }
+        })
+        <h1 class="section-title">
+            <span>Регистрационные документы</span>
+        </h1>
+        <div class="container">
+            <section class="doc-text">
+                <div class="page-header-text">
+                    <p>Специализацией компании "ХИМЛАБОРРЕАКТИВ" является комплексное оснащение лабораторий. Если Вашему
+                        предприятию необходимо купить лабораторное оборудование или купить медицинское оборудование,
+                        лабораторную посуду, а также реактивы – смело обращайтесь в наш интернет-магазин.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <section class="documents">
+            <div class="container">
+                <div class="doc-container">
+                    <div class="document-item">
+                        <figure class="doc-image">
+                            <img src="images/admin/doc-1.jpg"/>
+                        </figure>
+                        <div class="document-caption">
+                            <span>
+                                Справка из единого государственного реестра предприятий и организаций Украины
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <figure class="doc-image">
+                            <img src="images/admin/doc-2.jpg"/>
+                        </figure>
+                        <div class="document-caption">
+                                    <span>
+                                     МинСтатистики_виды деятельности
+                                    </span>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <figure class="doc-image">
+                            <img src="images/admin/doc-3.jpg"/>
+                        </figure>
+                        <div class="document-caption">
+                            <span>
+                                Плательщик НДС
+                            </span>
+                        </div>
+                    </div>
+
+                <div class="document-item">
+                    <figure class="doc-image">
+                        <img src="images/admin/doc-4.jpg"/>
+                    </figure>
+                    <div class="document-caption">
+                        <span>
+                           Лицензия на прекурсоры
+                        </span>
+                    </div>
+                </div>
+
+                <div class="document-item" >
+                    <figure class="doc-image">
+                        <img src="images/admin/doc-5.jpg" >
+                    </figure>
+                    <div class="document-caption">
+                        <span>
+                            Свидетельство о регистрации
+                        </span>
+                    </div>
+                </div>
+
+                <div class="document-item" >
+                    <figure class="doc-image">
+                        <img src="images/admin/doc-6.jpg"/>
+                    </figure>
+                    <div class="document-caption">
+                        <span>
+                            О постановке на учет плательщика налогов
+                        </span>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+    <div class="custom-popup-bg">
+        <div class="custom-popup popup-container">
+            <div class="popup">
+                <div class="popup-content">
+                    <div class="popup-doc-container">
+                        <div class="block-bg-pic">
+                            <figure>
+                                <img class="pop-up-doc-img" src=""/>
+                                <figcaption class="doc-popup-caption">Fig1. - A view of the pulpit rock in Norway.
+                                </figcaption>
+                            </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+<!--main!-->
+
+
+@@include('templates/partials/footer.html')
+
+
+
+</body>
+</html>

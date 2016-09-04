@@ -4,7 +4,7 @@ var Auth = {
 	init : function () {
 		this.login();
         this.registration();
-		this.forgotPass()
+		this.forgotPass();
 		this.events();
 	},
 

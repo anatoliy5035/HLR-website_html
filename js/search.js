@@ -3,7 +3,7 @@
 var Search = {
 
     init : function() {
-        jQuery('.header-search button[type=submit]').val('').prop('disabled', true);
+        // jQuery('.header-search button[type=submit]').val('').prop('disabled', true);
         this.events();
     },
 

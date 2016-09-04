@@ -1,0 +1,141 @@
+@@include('templates/partials/head.html')
+
+@@include('templates/partials/header.html', {
+"link" : "calendar.html"
+})
+
+<!--main!-->
+<main>
+    <div class="page product-article-page">
+        @@include('templates/partials/breadcrumbs.html', {
+        "links" : {
+        "main" : "Главная",
+        "current" : "Титраторы"
+        }
+        })
+
+        <div class="container custom-container">
+            <article class="article">
+                <h1 style="margin-bottom: 50px" class="section-title">
+                    <span>Титраторы</span>
+                </h1>
+                <img style="float: right; margin-left: 2%;" src="images/admin/product-1.jpg" alt="">
+                <p>
+                    Современные титраторы – это приборы для автоматической реализации титриметрического анализа, которые
+                    одновременно дозируют титрант с помощью высокоточной автоматической бюретки и отслеживают точку
+                    эквивалентности с помощью потенциометрического, амперометрического или фотометрического датчика.
+                </p>
+                <p></p>
+                <p>
+                    Титраторы широко применяются в лабораторной практике, они облегчают работу исследователя и
+                    существенно увеличивают точность и воспроизводимость анализа за счет устранения субъективных ошибок.
+                </p>
+                <p></p>
+                <h3 style="text-transform: uppercase;">
+                    Существуют титраторы 3-х типов:
+                </h3>
+                <ul>
+                    <li>Ручные титраторы</li>
+                    <li>Потенциометрические титраторы</li>
+                    <li>Титраторы Карла Фишера</li>
+                </ul>
+                <p></p>
+                <p></p>
+                <p></p>
+                <img style="float: left; margin-right: 2%;" src="images/admin/product-2.jpg" alt="">
+                <p>
+                    Выбор того или иного титратора обуславливается прежде всего целями и задачами, которые
+                    ставятся перед самим титриметрическим анализом. Существуют модели самого различного
+                    типа: окислительно-восстановительные, кислотно-основные, осадительные, титрование по
+                    методу Карла Фишера и так далее.
+                </p>
+                <p></p>
+                <p>
+                    Мы предлагаем титраторы компаний Mettler-Toledo (Швейцария), SI Analytics (Германия), а
+                    также приборы отечественного производства.
+                </p>
+                <h3 style="text-transform: uppercase;">Титраторы Mettler-Toledo</h3>
+                <p>
+                    Приборы этой фирмы имеют славу чрезвычайно надежных и удобных в работе. Обширный
+                    модельный ряд включат в себя и простые автотитраторы EasyPlus, и
+                    сверхвысокопроизводительные установки Titration Excellence, способные одновременно
+                    выполнять несколько титрований.
+                </p>
+                <h3 style="text-transform: uppercase;">Титраторы SI Analytics</h3>
+                <p>
+                    Компания SI Analytics (ранее называлась Schott Instruments) выпускает титраторы серии
+                    TitroLine®
+                    Эти приборы стали широко распространенными среди наших клиентов благодаря простоте,
+                    надежности и универсальности конструкции.
+                </p>
+            </article>
+        </div>
+        <section class="also-interest-products">
+            <div class="container">
+                <h1 style="margin-bottom: 5%;" class="section-title">
+                    <span>Вас так же может заинтересовать</span>
+                </h1>
+                <div class="interest-products-items">
+                    <div class="interest-products-items-container">
+                        <div class="col-inline-md-3 col-inline-xs-12 col-inline-sm-6">
+                            <a href="javascript:;">
+                                <div class="also-interest-product-item">
+                                    <figure class="product-img">
+                                        <img src="images/admin/product-car-1.jpg" alt="">
+                                    </figure>
+                                    <div class="product-caption">
+                                        <span>Приборы/аппараты из стекла и детали к ним</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-inline-md-3 col-inline-xs-12 col-inline-sm-6">
+                            <a href="javascript:;">
+                                <div class="also-interest-product-item">
+                                    <figure class="product-img">
+                                        <img src="images/admin/product-car-2.jpg" alt="">
+                                    </figure>
+                                    <div class="product-caption">
+                                        <span>Аксессуары лабораторные</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-inline-md-3 col-inline-xs-12 col-inline-sm-6">
+                            <a href="javascript:;">
+                                <div class="also-interest-product-item">
+                                    <figure class="product-img">
+                                        <img src="images/admin/product-car-3.jpg" alt="">
+                                    </figure>
+                                    <div class="product-caption">
+                                        <span>Из стали, стеклоуглерода, платины и корунда</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-inline-md-3 col-inline-xs-12 col-inline-sm-6">
+                            <a href="javascript:;">
+                                <div class="also-interest-product-item">
+                                    <figure class="product-img">
+                                        <img src="images/admin/product-car-4.jpg" alt="">
+                                    </figure>
+                                    <div class="product-caption">
+                                        <span>Аналитическое оборудование</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<!--main!-->
+
+@@include('templates/partials/footer.html')
+
+</body>
+</html>

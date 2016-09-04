@@ -1,0 +1,115 @@
+@@include('templates/partials/head.html')
+
+@@include('templates/partials/header.html', {
+"link" : "rassilka.html"
+})
+
+<!--main!-->
+<main>
+    <div class="page contact-page">
+        @@include('templates/partials/breadcrumbs.html', {
+        "links" : {
+        "main" : "Главная",
+        "current" : "Контакты"
+        }
+        })
+        <section class="contacts">
+            <div class="container">
+                <h1 class="section-title">
+                    <span>Контакты</span>
+                </h1>
+                <div class="container-contacts">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div id="map" class="map">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="container-adress">
+                                <div class="contact-item c-i-1">
+                                    <h4 class="contact-title">
+                                        ООО «ХИМЛАБОРРЕАКТИВ» <br>
+                                        Директор
+                                    </h4>
+                                    <p class="name">Жолобицкий Владимир Иванович</p>
+                                </div>
+
+                                <div class="contact-item c-i-2">
+                                    <p>ул. Щелковская, 8, Бровары, 07400, <br> Киевская обл., Украина</p>
+                                </div>
+
+                                <div class="contact-item c-i-3">
+                                    <div>
+                                        <a  href="call:+380 (44) 494 42  42">+380 (44) 494 42  42</a>
+                                        <span>(Call-центр)</span>
+                                    </div>
+                                    <div>
+                                        <a  href="call: +380 (800) 502  70  70">+380 (800) 502  70  70</a>
+                                        <span>(бесплатный с городских телефонов Украины)</span>
+                                    </div>
+                                </div>
+
+                                <div class="contact-item c-i-4">
+                                    <p>Отдел продаж – <a href="mailto:sales@hlr.com.ua">sales@hlr.com.ua</a></p>
+                                    <p>Общий адрес – <a href="mailto:info@hlr.com.ua">info@hlr.com.ua</a></p>
+                                    <p>Отдел маркетинга – <a href="mailto:marketing@hlr.com.ua">marketing@hlr.com.ua</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="callback">
+            <div class="section-header">
+                <h1 class="section-title">
+                    <span>Обратная связь</span>
+                </h1>
+            </div>
+            <div class="comment-form-container callback-form ">
+                <form name="comment-form" novalidate="novalidate">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Ваше Имя">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-row">
+                                <input type="email" name="email" placeholder="E-mail">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-row">
+                                <input type="tel" name="phone" placeholder="Телефон">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-row">
+                                <input type="text" name="organization" placeholder="Организация">
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="textarea-row">
+                                <textarea name="textMessage" id="comment" placeholder="Текст сообщения"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="add-comment-button">
+                                <button type="submit" class="submit-button">Отправить</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+</main>
+<!--main!-->
+@@include('templates/partials/footer.html')
+
+</body>
+</html>
